@@ -20,4 +20,4 @@ A video walkthrough of the application's functionality can also be found [here](
 
 ## Contributors 
 - Nicola Marble 🌻  
-[GitHub](http://github.com/nicolalenee) [Repository](https://github.com/nicolalenee/readme-generator)
+[GitHub](http://github.com/nicolalenee) || [Repository](https://github.com/nicolalenee/readme-generator)
