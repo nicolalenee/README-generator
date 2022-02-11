@@ -19,6 +19,5 @@ Below is a screenshot of the application with all the prompts completed and the 
 A video walkthrough of the application's functionality can also be found [here](https://bootcampspot.instructuremedia.com/embed/bcbb0799-177f-4849-b9ff-afc23b4b4856).
 
 ## Contributors 
-- Nicola Marble 🌻
-[GitHub](http://github.com/nicolalenee)  
-[Repository](https://github.com/nicolalenee/readme-generator)
+- Nicola Marble 🌻  
+[GitHub](http://github.com/nicolalenee) [Repository](https://github.com/nicolalenee/readme-generator)
