@@ -1,41 +1,22 @@
-// if there is a license selected
-const generateLicense = license => {
-  if (!license || license === "None") {
-    return '';
-  }
-  return `
-  ## License
-  ${license}
-    `;
-}
+const { renderLicenseBadge, generateLicense, generateLicenseLink } = require('./generateLicenseInfo.js');
 
-// if there are tests for this project
-const generateTests = test => {
-  if(!test) {
-    return '';
-  }
-  return `
-  ## Tests
-  ${test}
-  `;
-}
 
-function generateMarkdown(data) {
+// function that generates the format and content of the README.md 
+const generateMarkdown = data => {
   const { title, license, description, installation, usage, contributions, test, github, email} = data;
 
   return `
   # ${title}
-  ${generateLicense(license)}
+  ${renderLicenseBadge(license)}
 
   ## Table of Contents
-    [Description](# Description)
-    [Installation](# Installation)
-    [Usage](# Usage)
-    [License](# License)
-    [Contributing](# Contributing)
-    [Tests](# Tests)
-    [Questions]{# Questions}
-  ---
+  [Description](#description)  
+  [Installation](#installation)  
+  [Usage](#usage)  
+  [Contributing](#contributing)  
+  [Tests](#tests)  
+  [Questions](#questions)  
+  ${generateLicenseLink(license)}  
 
   ## Description
   ${description}
@@ -49,12 +30,15 @@ function generateMarkdown(data) {
   ## Contributing
   ${contributions}
 
-  ${generateTests(test)}
+  ## Tests
+  ${test}
 
 
   ## Questions?
-  [http://github.com/${github}]
-  [${email}]
+  GitHub ❤️ : [http://github.com/${github}]  
+  Email 📧: [${email}]
+
+  ${generateLicense(license)}
 
 `;
 }

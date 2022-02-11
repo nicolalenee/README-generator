@@ -37,7 +37,7 @@ const promptProject = data => {
       type: 'list',
       name: 'license',
       messsage: 'What kind of license does this project have?',
-      choices: ['None', 'Apache 2.0', 'MIT', 'GNU GPLv2','GNU GPLv3', 'ISC'],
+      choices: ['None', 'Apache 2.0', 'MIT', 'GNU GPL v2','GNU GPLv3', 'ISC', 'IBM', 'Mozilla', 'Artistic 2.0'],
       default: 'None'
     },
     {
@@ -80,19 +80,14 @@ const promptProject = data => {
       }
     },
     {
-      type: 'confirm',
-      name: 'confirmTest',
-      message: 'Would you like to include test instructions?',
-      default: false
-    },
-    {
       type: 'input',
       name: 'test',
       message: 'Enter the test instructions:',
-      when: ({confirmTest}) => {
-        if(confirmTest) {
+      validate: testInput => {
+        if (testInput) {
           return true;
         } else {
+          console.log('Please enter the test instructions!')
           return false;
         }
       }
@@ -100,7 +95,7 @@ const promptProject = data => {
     {
       type: 'input',
       name: 'github',
-      message: 'Enter your GitHub username for questions',
+      message: 'Enter your GitHub username for questions:',
       validate: githubInput => {
         if (githubInput) {
           return true;
@@ -113,7 +108,7 @@ const promptProject = data => {
     {
       type: 'input',
       name: 'email',
-      message: 'Enter your email address:',
+      message: 'Enter your email address for questions:',
       validate: emailInput => {
         if (emailInput) {
           return true;
@@ -128,7 +123,7 @@ const promptProject = data => {
 
 
 // Create a function to initialize app
-function init() {
+const init = () =>  {
   promptProject()
   .then(fileData => {
     return generateMarkdown(fileData);

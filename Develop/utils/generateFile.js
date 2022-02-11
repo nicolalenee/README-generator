@@ -9,10 +9,10 @@ const writeFile = fileContent => {
       }
       resolve({
         ok: true,
-        message: 'README.md file created!'
-      })
-    })
-  })
-}
+        message: 'README file created!'
+      });
+    });
+  });
+};
 
 module.exports = writeFile;
