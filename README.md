@@ -16,7 +16,8 @@ Users will be able to enter pertenent information about the project. Users will 
 Below is a screenshot of the application with all the prompts completed and the README markdown file that was created.
 ![image](https://user-images.githubusercontent.com/86696492/153545240-5e4931d3-07ce-4464-81f5-b59c35d7213a.png)
 
+A video walkthrough of the application's functionality can also be found [here](https://bootcampspot.instructuremedia.com/embed/bcbb0799-177f-4849-b9ff-afc23b4b4856).
+
 ## Contributors 
-- Nicola Marble 🌻
-[GitHub](http://github.com/nicolalenee)
-[Repository](https://github.com/nicolalenee/readme-generator)
+- Nicola Marble 🌻  
+[GitHub](http://github.com/nicolalenee) || [Repository](https://github.com/nicolalenee/readme-generator)
